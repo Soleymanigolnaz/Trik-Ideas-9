@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/local.css">
+   
+</head>
+
+<body>
+    <div class="waviy" style="margin-left: 12%; margin-top: 5%;">
+        <span style="--i:1">D</span>
+        <span style="--i:2">R</span>
+        <span style="--i:3">A</span>
+        <span style="--i:4">G</span>
+        <span style="--i:5"></span>
+        <span style="--i:6">M</span>
+        <span style="--i:7">E</span>
+
+
+    </div>
+    <div class="box ">
+        <div class="img" draggable="true"></div>
+    </div>
+    <div class="box"></div>
+
+
+
+
+    <script>
+        const box = document.querySelectorAll('.box'),
+            img = document.querySelector('.img');
+
+        box.forEach((box) => {
+            box.addEventListener('dragover', (e) => {
+                e.preventDefault();
+            })
+            box.addEventListener('drop', () => {
+                box.appendChild(img)
+            })
+        })
+
+    </script>
+</body>
+
+</html>
